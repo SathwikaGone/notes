@@ -72,3 +72,17 @@ diff(29);
      }
   }
   multiple(21);
+
+  /*Write a JavaScript to replace each character of a given string by the next one in the English alphabet. */
+
+  function replaceAll(name){
+
+   for(var i=0;i<name.length;i++){
+      var x=name.charAt(i)
+      var l=parseInt(x, 36) - 9
+      // console.log(parseInt(x, 36) - 9);
+      console.log((l + 9+1).toString(36));
+   }
+     
+  }
+  replaceAll("hey")
