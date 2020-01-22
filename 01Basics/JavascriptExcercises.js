@@ -62,3 +62,13 @@ diff(29);
  }
  remove("sathwika",4);
  remove("super",5)
+
+ /*Write a JavaScript program to check whether a given
+  positive number is a multiple of 3 or a multiple of 7 */
+
+  function multiple(num){
+     if((num%3 ==0 )&& (num%7==0)){
+      console.log('The '+num+' is multiple of 3 and 7');
+     }
+  }
+  multiple(21);
