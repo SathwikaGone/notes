@@ -10,3 +10,16 @@
    
 }
 diff(8);
+
+/* Write a JavaScript program to compute the sum of the two given integers.
+ If the two values are same, then returns triple their sum. */
+
+ function sum(a,b){
+     if(a==b){
+        console.log ((a+b)*3);
+     }else{
+        console.log(a+b);
+     }
+ } 
+ sum(5,7);
+ sum(5,5);
