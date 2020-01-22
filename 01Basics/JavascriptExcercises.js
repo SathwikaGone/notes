@@ -52,3 +52,13 @@ diff(29);
  }
  py("pyname");
  py("sathwika");
+
+ /* Write a JavaScript program to remove a character at the specified position of a given string 
+ and return the new string. */
+
+ function remove(name,p){
+    var x= name.substring(0,p-1)+name.substring(p,(name.length));
+         console.log(x);
+ }
+ remove("sathwika",4);
+ remove("super",5)
