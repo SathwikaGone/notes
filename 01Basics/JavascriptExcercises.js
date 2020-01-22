@@ -86,3 +86,26 @@ diff(29);
      
   }
   replaceAll("hey")
+
+  /* Write a JavaScript code to divide a given array of positive integers into two parts. 
+  First element goes to first part, second element goes to second part, 
+  and third element goes to first part and so on.
+  Now compute the sum of two parts and store into an array of size two.*/
+
+  function arr(){
+     ar=[1,2,3,4,5,6,7,8,9]
+   var sum1=0,sum2=0;
+   for(i=0;i<ar.length;i++){
+      if(i%2==0){
+         sum1+=ar[i];
+         //  console.log(sum1);
+      }
+      else{
+         sum2+=ar[i];
+         // console.log(sum2);
+      }
+   }
+   arra=[sum1,sum2];
+   console.log(arra);
+  }
+arr();
