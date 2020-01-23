@@ -87,6 +87,63 @@ diff(29);
   }
   replaceAll("hey")
 
+   /* Write a JavaScript program to 
+   convert the letters of a given string in alphabetical order. */
+   function sort(str){
+      console.log(str.split("").sort().join(""));
+      }
+   sort("sathwika");
+
+
+
+   /*Write a JavaScript program to check whether the characters
+   a and b are separated by exactly 3 places anywhere (at least once) in a given string.  */
+      function place(str){
+
+         var p=str.split("");
+         if(str.includes("a") && str.includes("b")){
+            for(i=0;i<p.length;i++){
+               if(p[i]=="b"){
+                  x=  i;
+                  if(p[x-4]=="a" || p[x+4]=="a"){
+                    console.log("has a and b");
+                  }else{
+                     console.log("no a and b");
+                  }
+               }
+            }
+         }else{
+            console.log("no a and b");
+         }
+      }
+      place("ssasssb");
+      place("assb");
+      place("asbhjs");
+      place("annbnnbnnna")
+
+
+   /*Write a JavaScript to add two positive integers without carry */
+      function carry(num,num1){
+         p=num.toString().split("");
+         q=num1.toString().split("");
+         var o=[];
+         for(i=0;i<p.length;i++){
+            l=parseInt(p[i])+parseInt(q[i]);
+            // console.log("heyy im here");
+            if(l >9){
+               x=l.toString().split("");
+               o+=x[1];
+            }else{
+               x=l.toString().split("");
+               o+=x[0];
+            }
+         }
+         console.log(parseInt(o));
+
+      }
+      carry(259,376)
+
+
   /* Write a JavaScript code to divide a given array of positive integers into two parts. 
   First element goes to first part, second element goes to second part, 
   and third element goes to first part and so on.
@@ -130,3 +187,153 @@ function maxDiff(){
    console.log(maxdiv);
 }
 maxDiff();
+
+/*Write a JavaScript program to check whether 
+it is possible to rearrange characters of a given string in such way
+that it will become equal to another given string. */
+
+
+// function p(){
+//    var str="abc";
+//    var str2="bca";
+//    if(str.length==str2.length){
+//       for(var i=0;i<str.length;i++){
+//          for(var j=0;i<str.length;j++){
+//             if(str.charAt(i)===str2.charAt(j)){
+//                // console.log(str.charAt(i)==str2.charAt(j));
+//                console.log(str2.charAt(j));
+//          }
+//       }    
+      
+//       }
+//    }  
+// }
+// p();
+
+/*Write a JavaScript program to 
+find the number of inversions of a given array of integers. */
+
+function inversions(){
+var arr=[1,5,2,3,7,6];
+var count=0;
+var p;
+for(var i=0;i<arr.length;i++){
+   if(arr[i]>arr[i+1]) {
+   p=arr[1];
+   arr[i]=arr[i+1];
+   arr[i+1]=p
+   count++;
+   }
+}
+console.log(count);
+}
+inversions();
+
+/*Write a JavaScript program to find the maximal number 
+from a given positive integer by deleting exactly one digit of the given number. */
+
+function max(numb){
+   var ar=numb.toString()
+   var ar1=[];
+   var a;
+   var min=0;
+      for(i=0;i<ar.length;i++){
+      ar1[i] = ar.charAt(i)
+      ar1[i]= parseInt(ar1[i],10);
+      }
+      
+   min=Math.min(...ar1)
+      // console.log(ar1);
+   nump=ar1.indexOf(min)
+   a=ar1.slice(0,nump).join("");
+   ap=ar1.slice(nump+1,ar1.length).join("");
+      // x=a.join("")+ap.join("");
+      console.log(parseInt((a+ap),10));
+
+}
+max(2015);
+
+/*Write a JavaScript program to swap pairs
+ of adjacent digits of a given integer of even length. */
+
+function adj(num){
+   var ar=num.toString();
+   var ar1=[];
+   for(i=0;i<ar.length;i++){
+      ar1[i] = ar.charAt(i)
+      ar1[i]= parseInt(ar1[i],10);
+      }
+
+   if(ar1.length%2==0){
+      for(i=0; i<ar1.length;i++){
+         p=ar1[i];
+         ar1[i]=ar1[i+1];
+         ar1[i+1]=p;
+         i++
+      }
+      console.log(parseInt(ar1.join("")));
+   }else{
+      console.log("can't swap..")
+   }
+}
+adj(123479);
+
+/*Write a JavaScript program to find the shortest possible string which can create 
+a string to make it a palindrome by adding characters to the end of it. */
+   // function pal(str){
+   //    x=str.split("");
+   //    if(str.length%2==0){
+   //       if(x[str.length-1]==x[str.length-2]){
+   //          for(i=str.length-2;i<str.length-1;i--){
+   //             p=x[i];
+   //          }
+   //       }
+   //    }
+      
+   // }
+   // pal("satt");
+
+   /* Write a JavaScript program to find the number of times to replace a given 
+   number with the sum of its digits until it convert to a single digit number.  */
+
+   function rep(num){
+     var x=(num.toString().split(""));
+     var p=[];
+     var o=0;
+     for(i=0;i<x.length;i++){
+        p[i]=parseInt(x[i]);
+     }
+     console.log(p);
+     for(i=0;i<p.length;i++){
+        o+=p[i];
+     } 
+   //   console.log(o);
+     if(o>9){
+         // console.log(o);
+        rep(o);
+     }else{
+      console.log(o);
+     }
+    
+   }
+   rep(189);
+
+
+   /*Write a JavaScript program to break an address of an url and put it's part into an array.  */
+
+   function url(str){
+      var p=[];
+      i=1;
+         if(str.includes("://")){
+            p=str.split("://");
+            if(str.includes("/")){
+               p=p[1].split("/");
+               i++;
+            }
+         }
+          
+            
+      
+      console.log(p)
+   }
+   url("https://www.telerik.com/blogs/creating-a-responsive-layout-in-react");
