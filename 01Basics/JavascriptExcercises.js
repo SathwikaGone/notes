@@ -109,3 +109,24 @@ diff(29);
    console.log(arra);
   }
 arr();
+
+/*Write a JavaScript program to find the maximal difference between any two adjacent
+elements of a given array of integers. */
+
+function maxDiff(){
+   arr=[1,4,7,9,13,7,9,13,7,9];
+   // console.log(arr);
+   var maxdiv=0,max=0;
+
+   for(var i=0;i<=arr.length;i++){
+      if(arr[i]!=arr[i+1]){
+         max=Math.abs(arr[i]-arr[i+1]);
+         if(maxdiv<max){
+            maxdiv=max;
+         
+         }
+      }
+   }
+   console.log(maxdiv);
+}
+maxDiff();
