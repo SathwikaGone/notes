@@ -337,3 +337,67 @@ a string to make it a palindrome by adding characters to the end of it. */
       console.log(p)
    }
    url("https://www.telerik.com/blogs/creating-a-responsive-layout-in-react");
+
+   /* 143 Write a JavaScript program to sort the strings of a given array of 
+   strings in the order of increasing lengths. */
+
+   function inc(arr){
+    var x;
+      for(i=0;i<arr.length;i++){
+         for(j=i+1;j<arr.length;j++){
+            if(arr[i].length>arr[j].length){
+               x=arr[i];
+               arr[i]=arr[j];
+               arr[j]=x;
+               console.log(arr[i])
+            }
+         }
+          
+      }
+      console.log(arr)
+     
+   }
+   inc(["Laxmi","sathwika","Hitesh"]);
+  
+   /*Write a JavaScript program to replace the first digit in a string 
+   (should contains at least digit) with $ character.*/
+
+   function dig(str){
+
+      // console.log(parseInt(str.substring(0,1)));
+      // console.log(isNaN(parseInt(str.substring(0,1))))
+      if(!isNaN(parseInt(str.substring(0,1)))){
+         console.log("$"+str.substring(1));
+      }
+      else{
+         console.log(str);
+      }
+      
+   }
+   dig("1sath");
+   dig("hit")
+
+   /*Write a JavaScript program to check whether a given matrix is an identity matrix.
+   ([1, 0, 0], [0, 2, 0], [0, 0, 3] ]) = true */
+
+   function mat(){
+      ar=[[1, 0, 0], [0, 2, 0], [0, 0, 3] ]
+      for(i=0;i<ar.length;i++){
+         for(j=0;j<ar.length;j++){
+            if((i!==j) &&(ar[i][j]!==0))
+            console.log("NOT AN IDENTIY MATRIX")
+         }
+      }
+      console.log("IDENTITY MATRIX")
+   }
+   mat();
+
+
+   // function arrp(){
+   //    duplicatesArray=["sathwika","hitesh","Laxmi","sathwika"];
+   //    const namesArr = duplicatesArray.filter(function(elem, pos) { duplicatesArray.indexOf(elem) === pos;});
+   //   console.log(namesArr);
+   //   console.log("im here");
+   // }
+   // arrp();
+    
